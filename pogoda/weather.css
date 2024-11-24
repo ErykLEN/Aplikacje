@@ -1,0 +1,137 @@
+/* Ogólne ustawienia */
+body.day {
+    background: linear-gradient(to bottom, #56ccf2, #2f80ed); /* Jasne tło na dzień */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body.night {
+    background: linear-gradient(to bottom, #141e30, #243b55); /* Ciemne tło na noc */
+    color: #ddd;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #c0d318;
+}
+
+/* Styl wyszukiwarki */
+#weather-search-params {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+}
+
+#locationInput {
+    padding: 12px 15px;
+    width: 65%;
+    max-width: 400px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    background-color: #1e7e34;
+}
+
+/* Styl wyników pogody */
+#weather-results-container {
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+.weather-block {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    color: #fff;
+}
+
+.weather-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weather-temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.weather-temperature-feels-like {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.weather-description {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    #locationInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #weather-search-params {
+        padding: 15px;
+    }
+
+    .weather-block {
+        padding: 15px;
+    }
+
+    .weather-icon {
+        width: 80px;
+        height: 80px;
+    }
+}

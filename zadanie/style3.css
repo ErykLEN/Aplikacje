@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkviolet;
+}
+
+/* Nag��wek z t�em */
+header {
+    background-image: url("banner1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3vw; /* responsywne jednostki */
+    color: red;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 2.5vw;
+    color: brown;
+    font-style: italic;
+}
+
+section {
+    padding: 20px;
+}
+
+/* Lista rzeczy */
+ul {
+    list-style-type: disc;
+    padding: 12px;
+    border: 2px solid black;
+    width: fit-content;
+    background-color: lightgray;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Obramowanie dla obrazka */
+img {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    border: dashed;
+    max-width: 100%;
+}
+
+/* Stopka */
+footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Ruchoma Ziemia */
+@keyframes moveEarth {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.ziemia {
+    width: 100vw;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ziemia img {
+    width: 200px;
+    height: 100px;
+    border:dashed;
+    position: absolute;
+    animation: moveEarth 5s linear infinite;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    ul {
+        width: 90%;
+    }
+
+    .ziemia img {
+        width: 50px;
+        height: 50px;
+    }
+}

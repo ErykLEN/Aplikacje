@@ -1,0 +1,112 @@
+
+/* Ogólny wygl¹d strony */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: beige;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nag³ówek */
+header {
+    background-image: url("banner1.jpg"); /* Dodanie obrazu t³a */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4vw; /* Responsywne jednostki */
+    color: blue;
+    font-style: oblique;
+}
+
+h2 {
+    font-size: 3vw;
+    color: purple;
+    font-style: oblique;
+}
+
+section {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 12px;
+    background-color: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+    text-align: center;
+}
+
+    ul li {
+        margin: 5px;
+    }
+
+p {
+    text-align: center;
+}
+
+/* Stopka */
+footer {
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Ruchoma Ziemia */
+@keyframes moveEarth {
+    0% {
+        transform: translateX(100vh);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(100vh);
+    }
+}
+
+.ziemia {
+    width: 100vw;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .ziemia img {
+        width: 100px;
+        height: 200px;
+        border:dotted;
+        position: absolute;
+        animation: moveEarth 7s linear infinite;
+    }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 7vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    ul {
+        width: 90%;
+    }
+
+    .ziemia img {
+        width: 50px;
+        height: 50px;
+    }
+}

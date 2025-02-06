@@ -1,71 +1,116 @@
-/* Stylizacja podstawowa */
+/* Ogólny wygl¹d strony */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+/* Nag³ówek z t³em */
+header {
+    background-image: url("banner1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+    font-size: 3vw; /* responsywne jednostki */
+    color: red;
+    font-style: italic;
 }
 
-input[type="text"], input[type="datetime-local"] {
-    padding: 8px;
-    margin: 10px 0;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+h2 {
+    font-size: 2.5vw;
+    color: brown;
+    font-style: italic;
 }
 
-button {
-    padding: 8px 12px;
-    background-color: #5cb85c;
+section {
+    padding: 20px;
+}
+
+/* Lista rzeczy */
+ul {
+    list-style-type: disc;
+    padding: 12px;
+    border: 2px solid black;
+    width: fit-content;
+    background-color: lightgray;
+}
+
+    ul li {
+        margin: 5px 0;
+    }
+
+/* Obramowanie dla obrazka */
+img {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    border: dashed;
+    max-width: 100%;
+}
+
+/* Stopka */
+footer {
+    background-color: gray;
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #4cae4c;
-}
-
-#task-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-#task-list li {
-    background-color: white;
-    margin: 5px 0;
+    text-align: center;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#task-list span {
-    flex: 1;
-    padding-right: 10px;
-}
-
-#task-list button {
-    background-color: #d9534f;
-}
-
-#task-list button:hover {
-    background-color: #c9302c;
-}
-
-#search {
+    position: fixed;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 18px;
+    bottom: 0;
+}
+
+/* Ruchoma Ziemia */
+@keyframes moveEarth {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.ziemia {
+    width: 100vw;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .ziemia img {
+        width: 200px;
+        height: 100px;
+        border:dashed;
+        position: absolute;
+        animation: moveEarth 5s linear infinite;
+    }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    ul {
+        width: 90%;
+    }
+
+    .ziemia img {
+        width: 50px;
+        height: 50px;
+    }
 }
